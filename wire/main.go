@@ -30,9 +30,18 @@ func (m Mission) Start() {
 	fmt.Printf("%s defeats %s, world peace!\n", m.Player.Name, m.Monster.Name)
 }
 
-func main() {
+func test1() {
 	monster := NewMonster()
 	player := NewPlayer("dj")
 	mission := NewMission(player, monster) // 手动组装mission
 	mission.Start()
+}
+
+func test2() {
+	mission := InitMission("dj")
+	mission.Start()
+}
+
+func main() {
+	test2()
 }
